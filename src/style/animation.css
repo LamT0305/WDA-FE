@@ -1,0 +1,99 @@
+@-webkit-keyframes my {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@-moz-keyframes my {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@-o-keyframes my {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+@keyframes my {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: #fff;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+.text-animation {
+  /* width: 35%; */
+  font-size: 24px;
+  font-weight: bold;
+  -webkit-animation: my 1.2s infinite;
+  -moz-animation: my 1.2s infinite;
+  -o-animation: my 1.2s infinite;
+  animation: my 1.2s infinite;
+  text-align: center;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+
+  60% {
+    transform: scale(1.15, 0.85);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.rubberband {
+  display: inline-block;
+  animation: rubberBand 1s infinite;
+  transform-origin: center;
+  color: rgba(0, 150, 136, 0.75);
+  font-size: 22px;
+  font-weight: bold;
+  /* width: 35%; */
+  text-align: center;
+}

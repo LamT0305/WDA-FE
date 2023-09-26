@@ -1,0 +1,74 @@
+.carousel-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+}
+
+.mini-list {
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mini-list img {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    /* background-color: #333; */
+    /* color: #fff; */
+    border: none;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-button {
+    left: 0px;
+}
+
+.next-button {
+    right: 0px;
+}
+
+.product-img {
+    width: 100%;
+    padding: 10px;
+}
+
+
+.mini-list::-webkit-scrollbar {
+    width: 2px;
+    /* Width of the vertical scrollbar */
+    height: 8px;
+}
+
+.mini-list::-webkit-scrollbar-thumb {
+    background-color: rgba(67, 102, 176, 0.7);
+    /* Color of the thumb (the draggable part) */
+    border-radius: 4px;
+    /* Rounded corners for the thumb */
+}
+
+.mini-list::-webkit-scrollbar-track {
+    background-color: rgba(67, 102, 176, 0.2);
+    /* Color of the track (the background) */
+}
+
+/* Optional: Hover effect on the thumb */
+.mini-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(67, 102, 176, 1.0);
+}
