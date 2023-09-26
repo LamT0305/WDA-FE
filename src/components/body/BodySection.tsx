@@ -144,15 +144,15 @@ const BodySection: React.FC = () => {
             }}
           >
             <p>MUA 1 HỘP 99K + 30k SHIP</p>
-            <p>
+            <p style={{textAlign:'center'}}>
               MUA 2 HỘP TẶNG <span style={{ color: "red" }}>1 HỘP 199K</span> +
               MIỄN SHIP
             </p>
-            <p>
+            <p style={{textAlign:'center'}}>
               MUA 3 HỘP TẶNG <span style={{ color: "red" }}>1 HỘP 270K</span> +
               MIỄN SHIP
             </p>
-            <p>
+            <p style={{textAlign:'center'}}>
               MUA 4 HỘP TẶNG <span style={{ color: "red" }}>2 HỘP 350K</span> +
               MIỄN SHIP
             </p>
