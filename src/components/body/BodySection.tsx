@@ -35,7 +35,6 @@ const BodySection: React.FC = () => {
 
     createOrder(formData);
     
-    console.log(formData);
     setName("");
     setPhone("");
     setAddress("");

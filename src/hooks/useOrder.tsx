@@ -13,7 +13,7 @@ const useOrder = () => {
         }
       );
       if (res.data.status === "success") {
-        alert(res.data.message);
+        alert("Đặt hàng thành công");
       }
     } catch (error) {
       console.log(error);
