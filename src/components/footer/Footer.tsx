@@ -24,9 +24,15 @@ const Footer: React.FC = () => {
               <h5>Thông tin liên hệ</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
-                    Địa chỉ:{" "}
-                  </a>
+                  <p style={{fontSize:14}} className="nav-link p-0 text-muted">
+                    Địa chỉ:{"Cơ sở 1: Số 14 Trần vỹ, Cầu Giấy, Hà Nội"}
+                  </p>
+                  <p style={{fontSize:14}} className="nav-link p-0 text-muted">
+                    Địa chỉ:
+                    {
+                      "Cơ sở 2: 122 Phạm Văn Đồng, Phường 1, Gò Vấp, Thành Phố Hồ Chí Minh"
+                    }
+                  </p>
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-muted">
@@ -34,9 +40,9 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
-                    Email:
-                  </a>
+                  <p style={{fontSize:14}} className="nav-link p-0 text-muted">
+                    Email: giadungquynhanh220@gmail.com
+                  </p>
                 </li>
               </ul>
             </div>
@@ -45,12 +51,12 @@ const Footer: React.FC = () => {
               <h5>Dịch vụ khách hàng</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a style={{fontSize:14}} href="#" className="nav-link p-0 text-muted">
                     Chính sách vận chuyển
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="#" className="nav-link p-0 text-muted">
+                  <a style={{fontSize:14}} href="#" className="nav-link p-0 text-muted">
                     Chính sách bảo mật
                   </a>
                 </li>
