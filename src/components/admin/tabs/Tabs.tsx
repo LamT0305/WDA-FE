@@ -10,7 +10,7 @@ const Tabs: React.FC = () => {
 
   return (
     <div className="Tabs">
-      <ul className="nav">
+      <ul className="tab-nav">
         <TabNavItem
           title="Đơn hàng mới"
           id="tab1"

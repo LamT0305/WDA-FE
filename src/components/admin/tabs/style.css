@@ -1,19 +1,14 @@
-ul.nav li:first-child {
+ul.tab-nav li:first-child {
   border-bottom-left-radius: 2rem;
   border-top-left-radius: 2rem;
 }
 
-ul.nav li:last-child {
+ul.tab-nav li:last-child {
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
 }
 
-/* Remove browser defaults */
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 /* Style App.js wrapper */
 .App {
@@ -39,7 +34,7 @@ ul.nav li:last-child {
 }
 
 /* Tab Navigation */
-ul.nav {
+ul.tab-nav {
   width: 60%;
   margin: 0 auto 2rem;
   display: flex;
@@ -53,7 +48,7 @@ ul.nav {
   }
 }
 
-ul.nav li {
+ul.tab-nav li {
   width: 50%;
   padding: 1rem;
   list-style: none;
@@ -62,21 +57,21 @@ ul.nav li {
   transition: all 0.7s;
 }
 
-ul.nav li:first-child {
+ul.tab-nav li:first-child {
   border-bottom-left-radius: 2rem;
   border-top-left-radius: 2rem;
 }
 
-ul.nav li:last-child {
+ul.tab-nav li:last-child {
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
 }
 
-ul.nav li:hover {
+ul.tab-nav li:hover {
   background: rgba(50, 224, 196, 0.15);
 }
 
-ul.nav li.active {
+ul.tab-nav li.active {
   background: #014d76;
   color: white;
 }
