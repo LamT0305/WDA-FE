@@ -99,11 +99,11 @@ const BodySection: React.FC = () => {
         <div className="product-img">
           <div className="carousel-container">
             <div className="main-image">
-              <img src={images[currentIndex]} alt="Main Image" />
+              <img loading='lazy' src={images[currentIndex]} alt="Main Image" />
             </div>
             <div className="mini-list">
               {images.map((image, index) => (
-                <img
+                <img loading='lazy'
                   key={index}
                   src={image}
                   alt={`Mini Image ${index + 1}`}
@@ -112,14 +112,14 @@ const BodySection: React.FC = () => {
               ))}
             </div>
             <button className="prev-button" onClick={prevImage}>
-              <img
+              <img loading='lazy'
                 src={arrowPre}
                 alt=""
                 style={{ width: "32px", objectFit: "cover" }}
               />
             </button>
             <button className="next-button" onClick={nextImage}>
-              <img
+              <img loading='lazy'
                 src={arrowNex}
                 alt=""
                 style={{ width: "32px", objectFit: "cover" }}
@@ -225,7 +225,7 @@ const BodySection: React.FC = () => {
             }}
           >
             <div>
-              <img src={deli} alt="" className="web-icon" />
+              <img loading='lazy' src={deli} alt="" className="web-icon" />
             </div>
             <p style={{ width: "80%" }}>Giao hàng toàn quốc miễn phí</p>
           </li>
@@ -237,7 +237,7 @@ const BodySection: React.FC = () => {
             }}
           >
             <div>
-              <img src={check} alt="" className="web-icon" />
+              <img loading='lazy' src={check} alt="" className="web-icon" />
             </div>
             <p style={{ width: "80%" }}>Được kiểm tra hàng</p>
           </li>
@@ -249,7 +249,7 @@ const BodySection: React.FC = () => {
             }}
           >
             <div>
-              <img src={cart} alt="" className="web-icon" />
+              <img loading='lazy' src={cart} alt="" className="web-icon" />
             </div>
             <p style={{ width: "80%" }}>Nhận hàng mới phải thanh toán</p>
           </li>
@@ -261,7 +261,7 @@ const BodySection: React.FC = () => {
             }}
           >
             <div>
-              <img src={rate} alt="" className="web-icon" />
+              <img loading='lazy' src={rate} alt="" className="web-icon" />
             </div>
             <p style={{ width: "80%" }}>Sản phẩm uy tín, chất lượng</p>
           </li>
@@ -273,7 +273,7 @@ const BodySection: React.FC = () => {
             }}
           >
             <div>
-              <img src={like} alt="" className="web-icon" />
+              <img loading='lazy' src={like} alt="" className="web-icon" />
             </div>
             <p style={{ width: "80%" }}>Sản phẩm mới, hạn dùng 3 năm</p>
           </li>

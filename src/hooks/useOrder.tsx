@@ -8,27 +8,23 @@ import {
   HANDLE_DELETEORDER,
   HANDLE_UPDATEORDER,
   SET_ORDERSCONFIRMED,
+  SET_TOTALPAGESCF,
 } from "../redux/slice/OrderSlice";
 import axiosInstance from "../utils/axios";
-import { DELETE_API, GET_API, POST_API, PUT_API } from "../utils/api";
-import axios from "axios";
+import { DELETE_API, GET_API, PUT_API } from "../utils/api";
 
 const useOrder = () => {
   const dispatch = useDispatch();
-  const { isLoading, orders, totalPages } = useAppSelector(
+  const { isLoading, orders, totalPages, orderConfirmed } = useAppSelector(
     (state: RootState) => state.order
   );
 
   const createOrder = async (form: any) => {
     dispatch(SET_LOADING(true));
     try {
-
-      const jsonData = JSON.stringify(form);
-
-      const res = await axios.post(
+      const res = await axiosInstance.post(
         "https://wda-services.onrender.com/api/v1/order",
-        jsonData,
-        { headers: { "Content-Type": "application/json" } }
+        form
       );
       if (res.data.status === "success") {
         alert("Đặt hàng thành công");
@@ -38,6 +34,7 @@ const useOrder = () => {
     } catch (error) {
       console.log(error);
       dispatch(SET_LOADING(false));
+      alert("Lỗi hệ thống");
     }
   };
 
@@ -116,7 +113,7 @@ const useOrder = () => {
 
       if (res.data.status === "success") {
         dispatch(SET_ORDERSCONFIRMED(res.data.orders));
-        dispatch(SET_TOTALPAGES(res.data.totalPages));
+        dispatch(SET_TOTALPAGESCF(res.data.totalPages));
       }
       dispatch(SET_LOADING(false));
     } catch (error) {
@@ -134,6 +131,7 @@ const useOrder = () => {
     sortOrderByDate,
     sortOrderByQuantity,
     getAllOrdersConfirmed,
+    orderConfirmed,
   };
 };
 

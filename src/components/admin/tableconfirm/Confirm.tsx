@@ -3,11 +3,11 @@ import ConfirmIcon from "../../../assets/images/icons8-check-50.png";
 import DeleleIcon from "../../../assets/images/icons8-delete-48.png";
 import useOrder from "../../../hooks/useOrder";
 import { extractDate } from "../../../utils/utility";
-import "../../admin/news/style.css"
+import "../../admin/news/style.css";
 
 const Confirm: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const { orders, totalPages, getAllOrdersConfirmed } = useOrder();
+  const { orderConfirmed, totalPages, getAllOrdersConfirmed } = useOrder();
 
   useEffect(() => {
     getAllOrdersConfirmed(currentPage);
@@ -98,7 +98,7 @@ const Confirm: React.FC = () => {
       </div>
       <div className="tbbody">
         <div className="tbbody">
-          {orders.map((item) => (
+          {orderConfirmed.map((item) => (
             <div key={item._id}>
               <ul className="manage-table">
                 <li className="body-item">{item.product}</li>
