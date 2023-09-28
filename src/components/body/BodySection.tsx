@@ -32,7 +32,8 @@ const BodySection: React.FC = () => {
     formData.append("phone", phone);
     formData.append("address", address);
     formData.append("quantity", quantity.toString());
-
+    formData.append("product", "Viên xủi OXI")
+    formData.append("status", "pending");
     createOrder(formData);
     
     setName("");

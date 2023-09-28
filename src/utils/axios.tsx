@@ -1,15 +1,34 @@
-import axios, { AxiosInstance } from 'axios';
+import axios from "axios";
 
-// Create a new Axios instance with custom configurations
-const axiosInstance: AxiosInstance = axios.create({
-  baseURL: "https://wda-services.onrender.com/api/v1/order", // Replace with your API base URL
+const END_POINT = "https://wda-services.onrender.com/api/v1/order";
+// Create a custom axiosInstance of Axios
+const axiosInstance = axios.create({
+  baseURL: END_POINT, // Replace with your API base URL
   headers: {
-    'Content-Type': 'application/json', // Set default content type (JSON in this case)
+    "Content-Type": "application/json", // Example header
   },
 });
 
+// Add request interceptors if needed
+axiosInstance.interceptors.request.use(
+  (config) => {
+    // You can modify the config here before the request is sent
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
-
-// Optional: Add response interceptors or other configurations as needed
+// Add response interceptors if needed
+axiosInstance.interceptors.response.use(
+  (response) => {
+    // You can modify the response here before it's returned
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export default axiosInstance;

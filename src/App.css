@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   width: 400px;
   background-color: rgba(236, 241, 247, 1);
   margin: auto;

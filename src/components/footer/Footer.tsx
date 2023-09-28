@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li className="nav-item mb-2">
                   <a href="#" className="nav-link p-0 text-muted">
-                    Hotline:
+                    Hotline: 0822352890  - 0822361890
                   </a>
                 </li>
                 <li className="nav-item mb-2">
